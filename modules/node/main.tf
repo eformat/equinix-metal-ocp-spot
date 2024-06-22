@@ -4,8 +4,8 @@ resource "equinix_metal_spot_market_request" "spot_request" {
   project_id    = var.project_id
   metro         = var.metro
   max_bid_price = var.max_bid_price
-  devices_min   = var.node_count
-  devices_max   = var.node_count
+  devices_min   = 1
+  devices_max   = 1
   wait_for_devices = true
 
   instance_parameters {
