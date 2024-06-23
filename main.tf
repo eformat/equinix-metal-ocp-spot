@@ -172,5 +172,5 @@ resource "null_resource" "get_kubeconfig" {
 data "external" "kubeadmin_password" {
   depends_on = [null_resource.get_kubeconfig]
 
-  program = ["/bin/bash", "-c", "[ -f \"${path.root}/auth/kubeadmin-password\" ] && echo \"{\\\"password\\\":\\\"$(cat ${path.root}/auth/kubeadmin-password)\\\"}\""]
+  program = ["/bin/bash", "-c", "[ -f \"${path.root}/auth/auth/kubeadmin-password\" ] && echo \"{\\\"password\\\":\\\"$(cat ${path.root}/auth/kubeadmin-password)\\\"}\""]
 }
