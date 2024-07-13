@@ -15,7 +15,7 @@ variable "dns_provider" {
     export AWS_SECRET_ACCESS_KEY="..."
     export AWS_REGION="us-east-1"
   EOS
-  default     = "cloudflare"
+  default     = "aws"
 }
 
 variable "cluster_basedomain" {

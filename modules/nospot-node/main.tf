@@ -5,8 +5,7 @@ resource "equinix_metal_device" "node" {
   ipxe_script_url  = "http://${var.bastion_ip}:8080/${var.node_type}.ipxe"
   plan             = var.plan
   metro            = var.metro
-  count            = var.node_count
+  count            = 0
   billing_cycle    = "hourly"
   project_id       = var.project_id
 }
-

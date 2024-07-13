@@ -34,15 +34,15 @@ module "aws" {
   node_ips           = var.node_ips
 }
 
-module "cloudflare" {
-  count  = (var.dns_provider == "cloudflare") ? 1 : 0
-  source = "./modules/cloudflare"
+#module "cloudflare" {
+#  count  = (var.dns_provider == "cloudflare") ? 1 : 0
+#  source = "./modules/cloudflare"#
 
-  node_type          = var.node_type
-  cluster_name       = var.cluster_name
-  cluster_basedomain = var.cluster_basedomain
-  node_ips           = var.node_ips
-}
+#  node_type          = var.node_type
+#  cluster_name       = var.cluster_name
+# cluster_basedomain = var.cluster_basedomain
+#  node_ips           = var.node_ips
+#}
 
 module "linode" {
   count  = (var.dns_provider == "linode") ? 1 : 0
